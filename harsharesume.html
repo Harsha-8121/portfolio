@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kagitapalli Harshavardhan - Portfolio</title>
+  <link rel="icon" href="https://i.ibb.co/zRsTj3p/Frame-1-37.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<style>
+  /* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1a1a2e;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.header-area {
+  background: #0f3460;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  list-style: none;
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar li a:hover,
+.navbar li a.active {
+  color: #ffd369;
+}
+
+.menu_icon {
+  display: none;
+}
+
+/* Home Section */
+.FirstElement {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  padding: 80px 0;
+}
+
+.profile-photo img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #ffd369;
+}
+
+.profile-text {
+  max-width: 600px;
+}
+
+.profile-text h1 {
+  color: #ffd369;
+  font-size: 2.8rem;
+}
+
+.profile-text p {
+  margin-top: 10px;
+  color: #dddddd;
+}
+
+.btn-group {
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 10px 25px;
+  background-color: #ffd369;
+  color: #000;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  margin-right: 10px;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #f5c518;
+}
+
+.social a {
+  margin-right: 10px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.social a:hover {
+  color: #ffd369;
+}
+
+/* About Section */
+.about-area {
+  background-color: #16213e;
+  padding: 60px 0;
+}
+
+.about-content h4 {
+  color: #ffd369;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.about-content ul {
+  padding-left: 20px;
+}
+
+.about-content ul li {
+  margin-bottom: 10px;
+}
+
+.about-skills ul li {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+/* Section Headings */
+.section-heading {
+  text-align: center;
+  font-size: 30px;
+  color: #ffd369;
+  margin-bottom: 40px;
+}
+
+/* Education Section */
+.education-section {
+  background-color: #1a1a2e;
+  padding: 60px 0;
+}
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.education-card {
+  background: #0f3460;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 5px solid #ffd369;
+}
+
+.edu-degree {
+  color: #ffffff;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.edu-institute,
+.edu-year {
+  color: #dddddd;
+  font-size: 14px;
+}
+
+/* Skills Section */
+.skills-section {
+  background-color: #16213e;
+  padding: 60px 0;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.skill-card {
+  background: #0f3460;
+  padding: 15px 25px;
+  border-radius: 30px;
+  color: #fff;
+  font-weight: 500;
+  border: 2px solid transparent;
+  transition: 0.3s;
+}
+
+.skill-card:hover {
+  border-color: #ffd369;
+}
+
+/* Experience Section (Projects) */
+.experience-content {
+  background-color: #1a1a2e;
+  padding: 60px 0;
+}
+
+.experiences {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.experience {
+  flex: 1 1 45%;
+  background: #0f3460;
+  padding: 20px;
+  border-radius: 10px;
+  color: #dddddd;
+}
+
+.experience i {
+  font-size: 30px;
+  color: #ffd369;
+  margin-bottom: 10px;
+}
+
+.experience h4 {
+  color: #fff;
+  margin: 10px 0;
+}
+
+
+/* Footer */
+.footer {
+  background-color: #0f3460;
+  text-align: center;
+  padding: 20px 0;
+  color: #aaaaaa;
+  font-size: 14px;
+}
+
+</style>
+<body>
+  <header class="header-area">
+    <div class="container">
+      <div class="header">
+        <ul class="navbar">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+        </ul>
+        <div class="menu_icon">
+          <i class="fa fa-bars"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="FirstElement" id="home">
+    <div class="profile-photo">
+      <img src="C:\Users\DELL\OneDrive\Pictures\harshapic.jpg" alt="Harshavardhan">
+    </div>
+    <div class="profile-text">
+      <h5>Hello I'm</h5>
+      <h1>Kagitapalli Harshavardhan</h1>
+      <p>Electronics & Communication Engineering student passionate about Full Stack Web Development and VLSI Design.</p>
+      <div class="btn-group">
+        <a href="C:\Users\DELL\Downloads\harsresume.pdf" class="btn active">View Resume</a>
+        <a href="mailto:kagitapalliharshavardhan@gmail.com" class="btn">Contact</a>
+      </div>
+      <div style="margin-top: 20px;margin-left: 20px;" class="social">
+        <a href="mailto:kagitapalliharshavardhan@gmail.com"><i class="fa fa-envelope"></i></a>
+        <a href="https://github.com/Harsha-8121"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <section class="about-area" id="about">
+    <div class="container">
+      <div class="about">
+        <div class="about-content">
+          <h4>About Me</h4>
+          <ul>
+            <li>B.Tech final-year ECE student at Andhra University.</li>
+            <li>Strong knowledge in Web Development (HTML, CSS, JS, React, NodeJS) and VLSI (Verilog).</li>
+            <li>Completed internships at BSNL, SkillDzire, and Hippo Cloud Technologies.</li>
+          </ul>
+        </div>
+        <div class="about-skills">
+          <ul>
+            <li><strong>Name:</strong> Kagitapalli Harshavardhan</li>
+            <li><strong>Age:</strong> 20</li>
+            <li><strong>Email:</strong> kagitapalliharshavardhan@gmail.com</li>
+            <li><strong>Phone:</strong> +91-8121316168</li>
+            <li><strong>Languages:</strong> English, Telugu</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="education-section" id="education">
+    <div class="container">
+      <h2 class="section-heading">Education</h2>
+      <div class="education-grid">
+        <div class="education-card">
+          <h3 class="edu-degree">B.Tech - ECE (CGPA: 7/10)</h3>
+          <p class="edu-institute">Andhra University College of Engineering</p>
+          <p class="edu-year"><i class="fa fa-calendar"></i> 2022–2026</p>
+        </div>
+        <div class="education-card">
+          <h3 class="edu-degree">Intermediate - 70.70%</h3>
+          <p class="edu-institute">Gayatri Junior College, Srikakulam</p>
+          <p class="edu-year"><i class="fa fa-calendar"></i> 2020–2022</p>
+        </div>
+        <div class="education-card">
+          <h3 class="edu-degree">10th - CGPA 10/10</h3>
+          <p class="edu-institute">Municipal High School, Amadalavalasa</p>
+          <p class="edu-year"><i class="fa fa-calendar"></i> 2019–2020</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="skills-section" id="skills">
+    <div class="container">
+      <h2 class="section-heading">Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card"><img src="https://img.icons8.com/?size=100&id=12239&format=png&color=000000"></div>
+        <div class="skill-card"><img src="https://img.icons8.com/?size=100&id=11935&format=png&color=000000"></div>
+        <div class="skill-card"><img src="https://img.icons8.com/?size=100&id=12276&format=png&color=000000"></div>
+        <div class="skill-card"><img src="https://img.icons8.com/?size=100&id=NfbyHexzVEDk&format=png&color=000000"></div>
+        <div class="skill-card"><img src="https://img.icons8.com/?size=100&id=hsPbhkOH4FMe&format=png&color=000000"></div>
+        <div class="skill-card"><img src="https://img.icons8.com/?size=100&id=cyigUQkeuMUj&format=png&color=000000"></div>
+        <div class="skill-card"><img src="https://img.icons8.com/?size=100&id=r5Y16PcDkoWI&format=png&color=000000"></div>
+        <div class="skill-card"><img src="https://cdn.freebiesupply.com/logos/large/2x/vlsi-logo-png-transparent.png" width="140px"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="experience-content" id="projects">
+    <div class="container">
+      <div class="experience-title">
+        <h4>My Projects</h4>
+        <p>Major academic and personal technical contributions</p>
+      </div>
+      <div class="experiences">
+        <div class="experience">
+          <i class="fa fa-microchip"></i>
+          <h4>PAM using Verilog</h4>
+          <p>Digital generation and simulation of PAM signals in Verilog. <a href="https://github.com/Harsha-8121/PAM-using-verilog" target="_blank">GitHub</a></p>
+        </div>
+        <div class="experience">
+          <i class="fa fa-calculator"></i>
+          <h4>Floating Point Unit</h4>
+          <p>IEEE 754-compliant FPU for arithmetic ops. <a href="https://github.com/Harsha-8121/Floating-point-unit" target="_blank">GitHub</a></p>
+        </div>
+        <div class="experience">
+          <i class="fa fa-laptop-code"></i>
+          <h4>Portfolio Website</h4>
+          <p>Responsive portfolio using HTML/CSS/JS. <a href="https://harsha-8121.github.io/portfolio/" target="_blank">Live</a></p>
+        </div>
+        <div class="experience">
+          <i class="fa fa-code"></i>
+          <h4>Arithmetic Unit</h4>
+          <p>Performs basic binary ops using Verilog. <a href="https://github.com/Harsha-8121/Arthematic-Unit" target="_blank">GitHub</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="message">Thank you for visiting my portfolio!</div>
+    <div class="copyright">
+      &copy; 2025 Kagitapalli Harshavardhan. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="script.js"></script>
+</body>
+</html>
